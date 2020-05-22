@@ -22,8 +22,68 @@
       </nav>
     </header>
     <main>
+      <section class="filter">
+        <h1 class="visually-hidden">Выбор отеля</h1>
+        <form action="https://echo.htmlacademy.ru/courses" method="get" oninput="sumoutput.value=price.value">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="poll" id="swim-poll">
+                <label for="swim-poll">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="parking-box">
+                <label for="parking-box">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="wifi" checked>
+                <label for="wifi">WI-FI</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel-box" checked>
+                <label for="hotel-box">Отель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="motel-box" checked>
+                <label for="motel-box">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartaments" id="apartaments-box" checked>
+                <label for="apartaments-box">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Стоимость в сутки (Р):</legend>
+            от 0
+            <input type="range" name="price" min="0" max="4000" step="100" id="price" value="3000">
+            до
+            <output name="sum" id="sumoutput">3000</output>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+      <div class="results">
+        <h3>Найдено</h3>
+        <p>Сортировка:</p>
+        <button>По цене</button>
+        <button>По типу</button>
+        <button>По рейтингу</button>
+        <button>
+          <img src="img/icon-up-dir.svg" width="11" height="10" alt="Кнопка вверх">
+        </button>
+        <button>
+          <img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка вниз">
+        </button>
+      </div>
        <section class="hotels-list">
-         <h1 class="visually-hidden">Выбор отеля</h1>
+         <h2 class="visually-hidden">Каталог отелей</h2>
            <ul>
              <li class="hotels-list-item">
                 <a href="arma-resort.html">
@@ -68,7 +128,7 @@
                 <a class="more" href="apartaments.html">Подробнее</a>
                 <a class="booking" href="booking.html">Забронировать</a>
                 <p>Рейтинг: 8.9</p>
-                <img src="img/villas-at-poco.jpg" alt="Фото Апартаментов Villas At Poco Diablo">
+                <img src="img/villas-poco.jpg" alt="Фото Апартаментов Villas At Poco Diablo">
               </li>
             </ul>
         </section>
