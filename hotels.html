@@ -4,21 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="information.html">Информация</a></li>
-            <li class="nav-item"><a href="media.html">Фото и Видео</a></li>
-            <li class="nav-item"><a href="map.html">Карта Штата</a></li>
-            <li class="nav-item"><a>Гостиницы</a></li>
-        </ul>
+      <nav class="navigation">
         <a href="index.html">
-          <img src="img/logo.svg" alt="На главную страницу">
+          <img src="img/logo.svg" width="138" height="70" alt="Логотип седоны">
         </a>
+        <ul class="nav-list">
+           <li class="nav-item"><a href="information.html">Информация</a></li>
+           <li class="nav-item"><a href="media.html">Фото и Видео</a></li>
+           <li class="nav-item"><a href="map.html">Карта Штата</a></li>
+           <li class="nav-item"><a>Гостиницы</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -82,9 +82,9 @@
           <img src="img/icon-down-dir.svg" width="11" height="10" alt="Кнопка вниз">
         </a>
       </div>
-       <section class="hotels-list">
+       <section class="hotels">
          <h2 class="visually-hidden">Каталог отелей</h2>
-           <ul>
+           <ul class="hotels-list">
              <li class="hotels-list-item">
                 <a href="arma-resort.html">
                   <h2>Amara Resort & Spa</h2>
@@ -159,7 +159,9 @@
       </section>
       <section class="copyright">
         <p>WEBSITE by</p>
-        <img src="img/logo-htmlacademy.svg" alt="Логотип html академии">
+        <a href="https://htmlacademy.ru/">
+          <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
+        </a>
       </section>
     </footer>
   </body>
