@@ -1,5 +1,5 @@
 :root {
-  --basic-white: #ffffff;
+  --basic-white: #FFFFFF;
   --basic-gray: #EEEEEE;
   --basic-light-blue: #81B3D2;
   --basic-dark-blue: #669EC0;
@@ -7,16 +7,16 @@
   --basic-brown:#766357;
   --basic-brown-dark: #604E43;
   --basic-brown-extra-dark: #503E33;
-  --special-index:#F2F2F2;
   --basic-black: #000000;
-  --special-white: rgba(255, 255, 255, 0.3);
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --background-index:#F2F2F2;
 }
 
 body {
   font-family: 'PT Sans', 'Arial', sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  background-color: var(--special-index);
+  background-color: var(--background-index);
   color: var(--basic-black);
   text-align: center;
   margin: 0;
@@ -170,28 +170,25 @@ img {
   color: var(--basic-black)
 }
 
-.more {
+.more,
+.booking {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  background-color: var(--basic-light-blue);
-  width: 110px;
-  height: 27px;
 }
+.more {
+  background-color: var(--basic-light-blue);
+}
+.booking {
+  background-color: var(--basic-brown);
+}
+
 .more:hover {
   background-color: var(--basic-dark-blue);
 }
 .more:active {
   background-color: var(--basic-extra-dark-blue);
-  color: var(--special-white)
-}
-.booking {
-font-weight: bold;
-font-size: 14px;
-line-height: 21px;
-background-color: var(--basic-brown);
-width: 142px;
-height: 27px;
+  color: var(--transparent-white)
 }
 
 .booking:hover {
@@ -199,7 +196,7 @@ height: 27px;
 }
 .booking:active {
   background-color: var(--basic-brown-extra-dark);
-  color: var(--special-white)
+  color: var(--transparent-white)
 }
 
 .hotels-list-item a{
