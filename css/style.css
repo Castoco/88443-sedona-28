@@ -12,6 +12,21 @@
   --background-index-gray:#F2F2F2;
 }
 
+.page {
+  height: 100%;
+}
+
+.page-header {
+
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+ /* Низ боди взял из демонстрации пока что не изучил гриды
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+ */
 body {
   font-family: 'PT Sans', 'Arial', sans-serif;
   text-transform: uppercase;
@@ -24,8 +39,14 @@ body {
   min-width: 1220px;
   line-height: 21px;
   font-weight: 400;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
+
+/* User navigation */
 a {
   text-decoration: none;
 }
@@ -35,15 +56,43 @@ img {
   height: auto;
 }
 .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 26px;
   font-weight: bold;
   background-color: var(--basic-white);
+  outline: 5px solid rgba(89, 0, 255, 0.3);
+  outline-offset: -5px;
+
 }
+.header-logo {
+width: 138px;
+outline: 5px solid rgba(255, 0, 0, 0.3);
+outline-offset: -5px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
 .nav-list {
+  display: flex;
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+  width: 100%;
+  padding: 0px;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-/* User navigation */
+
+
 .navigation a{
   color:var(--basic-black) ;}
 
@@ -64,25 +113,55 @@ img {
   color: var(--basic-brown);
 }
 /*features*/
+.main-page {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .features {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--basic-white);
+
+
 }
 .features .slogan{
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+
 }
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   font-size: 14px;
   line-height: 21px;
-  text-align: center;
+ border: 1px solid red;
+ justify-self: start;
+
+
+}
+.features-item {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+flex-grow: 3;
+border: 1px solid red;
+
+
 }
 .features-list h3{
   font-size: 21px;
   font-weight: bold;
-}
+  text-align: center;
 
+}
+.features-item>img{
+  flex-grow: 0;
+}
 .features-list .first,
 .features-list .second {
   color: var(--basic-white);
@@ -210,4 +289,9 @@ img {
 }
 .raiting {
   background-color: var(--background-index-gray);
+}
+
+/*Скрытое */
+.visually-hidden {
+  display: none;
 }
