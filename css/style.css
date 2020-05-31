@@ -305,13 +305,17 @@ align-items: center;
   width: 1054px;
   margin: 0 auto;
   outline: 5px solid red;
-  flex-direction: column;
   padding: 0px;
+  justify-content: center;
+  flex-direction: column;
 }
 .hotels-list li{
  display: flex;
  flex-wrap: wrap;
  outline: 3px solid green;
+ min-height: 151px;
+flex-direction: row;
+ justify-content: center;
 }
 .more,
 .booking,
@@ -320,11 +324,13 @@ align-items: center;
 }
 .hotels-list-item a:first-child{
   align-self: flex-start;
+
 }
 
 .hotels-list-item img{
   order: -1;
-  align-self: flex-end;
+  align-self: center;
+  justify-content: center;
 }
 .hotels-list-item h2{
   font-weight: bold;
@@ -332,13 +338,21 @@ align-items: center;
   line-height: 26px;
   color: var(--basic-black);
 }
+.hotels-list
 
 .more,
 .booking {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
+  align-self: flex-end;
 }
+
+.hotel,
+.price {
+ align-self: center;
+}
+
 .more {
   background-color: var(--basic-light-blue);
 }
