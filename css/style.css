@@ -232,22 +232,24 @@ align-items: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border:2px solid red;
+  outline:2px solid red;
   flex-direction:row;
 }
 .contacts {
-  flex-grow: 0;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   display: flex;
   justify-content: center;
   align-self: center;
-  flex-wrap: wrap;
-  border:2px solid black;
+  outline: 2px solid black;
+  flex-direction: column;
 }
 .contacts a {
   color: var(--basic-black);
+}
+.contacts p {
+  margin-bottom: 9px;
 }
 
 .socials {
@@ -282,10 +284,13 @@ align-items: center;
 }
 
 .copyright {
+  display: flex;
   outline: 5px solid red;
-  flex-grow: 1;
+  flex-grow: 0;
   font-size: 14px;
   line-height: 26px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /*hotel*/
@@ -314,43 +319,47 @@ align-items: center;
  flex-wrap: wrap;
  outline: 3px solid green;
  min-height: 151px;
-flex-direction: row;
- justify-content: center;
-}
-.more,
-.booking,
-.raiting{
- align-self: flex-end;
-}
-.hotels-list-item a:first-child{
-  align-self: flex-start;
-
+ flex-direction: row;
 }
 
-.hotels-list-item img{
+
+
+.img-hotel{
   order: -1;
   align-self: center;
-  justify-content: center;
 }
 .hotels-list-item h2{
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  margin: 0px;
 }
-.hotels-list
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  outline: 3px solid red;
+  justify-content: center;
+  flex-grow: 2;
+  padding-left: 19px;
+}
+.wrapper-2 {
+  display: flex;
+}
 
 .more,
 .booking {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
-  align-self: flex-end;
 }
 
 .hotel,
 .price {
- align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 10px;
 }
 
 .more {
@@ -378,9 +387,18 @@ flex-direction: row;
 
 .hotels-list-item a{
   color: var(--basic-white);
+  display: flex;
+  justify-content: flex-start
 }
 .raiting {
-  background-color: var(--background-index-gray);
+  display: flex;
+  justify-content: flex-end;
+  outline: 1px solid brown;
+  flex-grow: 7;
+  align-items: flex-end;
+}
+.raiting p {
+  background-color: var(--basic-gray);
 }
 
 /*Скрытое */
