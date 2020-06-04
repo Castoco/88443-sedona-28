@@ -18,7 +18,7 @@
             <li class="nav-item"><a href="information.html">Информация</a></li>
             <li class="nav-item"><a href="media.html">Фото и Видео</a></li>
             <li class="nav-item"><a href="map.html">Карта Штата</a></li>
-            <li class="nav-item"><a href="hotels.html">Гостиницы</a></li>
+            <li class="nav-item"><a>Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -26,9 +26,9 @@
         <section class="filter">
           <h1 class="visually-hidden">Выбор отеля</h1>
           <form action="https://echo.htmlacademy.ru/courses" method="get" oninput="sumoutput.value=price.value">
-          <fieldset>
+            <fieldset>
             <legend>Инфраструктура:</legend>
-            <ul>
+            <ul class="infrastructure">
               <li>
                 <input type="checkbox" name="poll" id="swim-poll">
                 <label for="swim-poll">Бассейн</label>
@@ -42,8 +42,8 @@
                 <label for="wifi">WI-FI</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset>
+            </fieldset>
+            <fieldset>
             <legend>Тип жилья:</legend>
             <ul>
               <li>
@@ -59,15 +59,16 @@
                 <label for="apartaments-box">Апартаменты</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Стоимость в сутки (Р):</legend>
-            от 0
-            <input type="range" name="price" min="0" max="4000" step="100" id="price" value="3000">
-            до
-            <output name="sum" id="sumoutput">3000</output>
-          </fieldset>
-          <button type="submit">Показать</button>
+            </fieldset>
+            <fieldset>
+              <legend>Стоимость в сутки (Р):</legend>
+              <div class="price-toggle">
+                <div>от 0</div>
+                <output name="sum" id="sumoutput">ДО 3000</output>
+              </div>
+              <input type="range" name="price" min="0" max="4000" step="100" id="price" value="3000">
+              <button type="submit" class="show">Показать</button>
+            </fieldset>
           </form>
         </section>
         <div class="results">
