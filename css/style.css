@@ -81,6 +81,7 @@ img {
 
 .nav-list {
   display: flex;
+  margin: 0px;
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
   width: 100%;
@@ -242,7 +243,48 @@ img {
 }
 
 .form-booking {
-  display: none;
+  margin: 0 auto;
+}
+.booking-field {
+  width: 568px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 51px;
+  outline: solid 2px red;
+}
+
+input[type="date"] {
+  min-width: 346px;
+  background-color: var(--background-index-gray);
+  border: none;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.booking-item {
+  padding-bottom: 29px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+.booking-field button[type="submit"] {
+  padding: 16px 181px;
+  margin-bottom: 51px;
+  background-color: var(--basic-light-blue);
+  border: none;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-family: PT Sans;
 }
 /*footer*/
 
@@ -311,12 +353,69 @@ img {
 }
 
 /*hotel*/
+.filter form{
+  display: flex;
+  padding: 48px;
+  justify-content: space-around;
+  outline: solid 1px greenyellow;
+}
+
+
 .filter {
-  display: none;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: var(--basic-white)
 }
+.filter ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  outline: 2px solid red;
+}
+.filter fieldset{
+  border: none;
+  display: flex;
+  margin: 0px;
+  outline: 2px solid green;
+}
+
+.price-toggle {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.show {
+  font-family: PT Sans;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  padding: 8px 35px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  color: var(--basic-white);
+  background-color: transparent;
+}
+
 .results {
-  display: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+/*****Список отелей**/
 
 .hotels-list {
   display: flex;
