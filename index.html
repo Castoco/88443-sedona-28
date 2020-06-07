@@ -15,17 +15,17 @@
             <img src="img/logo.svg" width="138" height="70" alt="Логотип седоны">
           </a>
           <ul class="nav-list">
-            <li class="nav-item"><a href="information.html">Информация</a></li>
-            <li class="nav-item"><a href="media.html">Фото и Видео</a></li>
-            <li class="nav-item"><a href="map.html">Карта Штата</a></li>
-            <li class="nav-item"><a href="hotels.html">Гостиницы</a></li>
+            <li class="nav-item information-item"><a href="information.html">Информация</a></li>
+            <li class="nav-item media-item"><a href="media.html">Фото и Видео</a></li>
+            <li class="nav-item map-item"><a href="map.html">Карта Штата</a></li>
+            <li class="nav-item hotels-item"><a href="hotels.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
       <main class="main-page">
         <section class="caption">
           <h1 class="visually-hidden">Сайт города Седона</h1>
-          <img src="img/background-photo.jpg" width="1200" height="509" alt="Фоновое изображение седоны">
+          <div class="sedona-photo"><div class="welcome"><div class="mask"></div></div></div>
         </section>
         <section class="features">
            <h2 class="visually-hidden">Преимущества Седоны</h2>
@@ -80,26 +80,28 @@
            </ul>
         </section>
         <section class="form-order">
-           <h2>Заинтересовались?</h2>
-           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-           <button type="button">Поиск гостиницы в Седоне</button>
-           <div class="form-booking">
-             <form action="https://echo.htmlacademy.ru/courses" method="get" class="booking-field">
-               <div class="booking-item">
-                 <label for="date-arrival">Дата заезда:</label>
-                 <input type="date" name="arrival" id="date-arrival">
-                 <button type="button">
-                   <img src="img/calendar.svg" width="21" height="23" alt="Календарь для выбора даты">
-                 </button>
+          <div class="order">
+            <h2>Заинтересовались?</h2>
+            <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          </div>
+          <button type="button">Поиск гостиницы в Седоне</button>
+          <div class="form-booking">
+            <form action="https://echo.htmlacademy.ru/courses" method="get" class="booking-field">
+              <div class="booking-item">
+                <label for="date-arrival">Дата заезда: </label>
+                <input type="text" name="arrival" id="date-arrival">
+                <button type="button">
+                  <img src="img/calendar.svg" width="21" height="23" alt="Календарь для выбора даты">
+                </button>
                </div>
                <div class="booking-item">
                  <label for="date-checkout">Дата выезда:</label>
-                 <input type="date" name="checkout" id="date-checkout">
+                 <input type="text" name="checkout" id="date-checkout">
                  <button type="button">
                    <img src="img/calendar.svg" width="21" height="23" alt="Календарь для выбора даты">
                  </button>
                 </div>
-               <div class="booking-item">
+               <div class="booking-item people">
                  <label for="adults-field">Взрослые:</label>
                  <button type="button">-</button>
                  <input type="number" name="adults" id="adults-field" value="2" min="1" max="10" step="1">
@@ -118,7 +120,8 @@
         </div>
       </main>
       <footer>
-        <div class="main-footer">
+        <div class="footer-wrapper">
+          <div class="main-footer">
           <section class="contacts">
             <p>#VISITSEDONA</p>
             <a href="tel:+7(495)666-01-66">ТЕЛ: +7(495) 666-01-66</a>
@@ -127,7 +130,7 @@
             <ul class="socials-list">
               <li class="social-items">
                 <a href="twitter.com/sedona">
-                  <img src="img/twitter.svg" width="17" height="17" alt="twitter">
+                  <img src="img/twitter.svg" width="17" height="15" alt="twitter">
                 </a>
               </li>
               <li class="social-items">
@@ -148,6 +151,7 @@
               <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип htmlacademy">
             </a>
           </section>
+          </div>
         </div>
       </footer>
     </div>
