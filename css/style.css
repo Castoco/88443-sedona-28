@@ -395,6 +395,7 @@ img {
   position: absolute;
   right: 5px;
   fill: var(--basic-gray-dark);
+  background-color: transparent;
 }
 
 .people button[type="button"] {
