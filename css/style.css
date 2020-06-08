@@ -1,6 +1,7 @@
 :root {
   --basic-white: #FFFFFF;
   --basic-gray: #EEEEEE;
+  --basic-gray-dark: #A9A9A9;
   --basic-light-blue: #81B3D2;
   --basic-dark-blue: #669EC0;
   --basic-extra-dark-blue: #5496BD;
@@ -393,6 +394,7 @@ img {
   margin: 0px;
   position: absolute;
   right: 5px;
+  fill: var(--basic-gray-dark);
 }
 
 .people button[type="button"] {
@@ -400,7 +402,19 @@ img {
   margin: 0px;
   position: absolute;
   background-color: transparent;
+  fill: var(--basic-gray-dark);
 }
+
+.people button[type="button"]:hover,
+.booking-item button[type="button"]:hover {
+  fill: var(--basic-black);
+}
+
+.people button[type="button"]:active,
+.booking-item button[type="button"]:active {
+  fill: var(--basic-light-blue)
+}
+
 .adults .minus {
   top: 1px;
   left: 117px;
