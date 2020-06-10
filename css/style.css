@@ -214,8 +214,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.features-item span{
+  padding-top: 25px;
 }
 
 .features-list h3 {
@@ -223,18 +226,61 @@ img {
   line-height: 21px;
   font-weight: bold;
   text-align: center;
+  padding-right: 125px;
+  padding-left: 124px;
+  padding-top: 47px;
+  margin: 0px;
 }
 
 .features-list p {
   font-size: 14px;
   line-height: 21px;
+  padding: 0px 49px;
+  margin: 0px;
+  padding-top: 25px;
 }
 
+.house h3,
+.eat h3,
+.souvenir h3 {
+  padding-top: 0px;
+}
+
+.eat img {
+  padding-top: 61px;
+ padding-bottom: 28px;
+}
+
+.house img {
+  padding-top: 60px;
+  padding-bottom: 28px;
+}
+
+.souvenir img {
+  padding-top: 55px;
+  padding-top: 55px;
+  padding-bottom: 28px;
+}
+/* Мне кажется тут гораздо проще задать было тег </br>
+чем для всех элементов списка преимуществ городить отступы по краям ведь у всех они разные,
+получается дольше и кода больше, почему нельзя? */
+.area,
+.road {
+  padding: 0px 15px;
+}
+
+.tourists {
+  padding: 0px 24px;
+}
 
 .features-list .first,
 .features-list .second {
   color: var(--basic-white);
   background-color: var(--basic-light-blue)
+}
+
+.second h3 {
+  padding-top: 50px;
 }
 
 /*order*/
@@ -291,6 +337,7 @@ img {
   left: 50%;
   margin-left: -284px;
   background-color: inherit;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 .booking-field {
   width: 568px;
