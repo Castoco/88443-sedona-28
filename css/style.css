@@ -9,9 +9,14 @@
   --basic-brown-dark: #604E43;
   --basic-brown-extra-dark: #503E33;
   --basic-black: #000000;
+  --copyright-black: #231F20;
   --transparent-white: rgba(255, 255, 255, 0.3);
   --trasparent-white-light: rgba(255, 255, 255, 0.9);
   --background-index-gray:#F2F2F2;
+  --arrow-fill: #CACACA;
+  --rating-gray: #666666;
+  --border-gray: #E5E5E5;
+  --input-gray-dark: #EBEBEB;
 }
 
 .page {
@@ -22,12 +27,6 @@
   outline: 5px solid rgba(0, 255, 0, 0.3);
   outline-offset: -5px;
 }
- /* Низ боди взял из демонстрации пока что не изучил гриды
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
- */
 
 body {
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -79,7 +78,7 @@ img {
   background-color: var(--basic-white);
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 /* Отступы элементов в меню навигации*/
 .information-item {
@@ -126,7 +125,8 @@ img {
   /*Навигация меню при совпадает по стилю(цвету принаведении) с сылками на отели.*/
 .navigation a:hover,
 .navigation a:focus,
-.hotels-list-item h2:hover {
+.hotels-list-item h2:hover,
+.hotels-list-item h2:focus {
   color: var(--basic-light-blue);
 }
 
@@ -316,6 +316,19 @@ img {
   padding-left: 12px;
   text-transform: uppercase;
 }
+
+.booking-item input:hover{
+  background-color: var(--input-gray-dark);
+}
+
+.booking-item input:focus,
+.booking-item input:active {
+  border: 2px solid #E5E5E5;
+  background-color: var(--basic-white);
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+}
 .people {
   display: flex;
   justify-content: space-between;
@@ -389,6 +402,16 @@ img {
   font-family: PT Sans;
 }
 
+.booking-field button[type="submit"]:hover,
+.booking-field button[type="submit"]:focus {
+  background-color: var(--basic-dark-blue);
+}
+
+.booking-field button[type="submit"]:active {
+  background-color: var(--basic-extra-dark-blue);
+  color: var(--transparent-white)
+}
+
 .booking-item button[type="button"] {
   border: none;
   margin: 0px;
@@ -407,7 +430,9 @@ img {
 }
 
 .people button[type="button"]:hover,
-.booking-item button[type="button"]:hover {
+.booking-item button[type="button"]:hover,
+.people button[type="button"]:focus,
+.booking-item button[type="button"]:focus {
   fill: var(--basic-black);
 }
 
@@ -439,27 +464,27 @@ img {
   top: 5px;
 }
 
-
-
-
 .map {
   display: flex;
 }
+
 /*footer*/
 .footer-wrapper{
   position: relative;
 }
 .main-footer {
-  background-color: var(--trasparent-white-light);
   margin: 0px;
   display: flex;
   flex-direction:row;
+  padding-top: 2px;
   width: 1200px;
 }
 
 .home-page {
   position: absolute;
   top: -120px;
+  background-color: var(--trasparent-white-light);
+  padding: 0px;
 }
 
 .contacts {
@@ -527,9 +552,22 @@ img {
   width:400px;
 }
 
-.copyright p{
+.copyright p {
   margin-right: 8px;
   margin-left: 65px;
+}
+
+.copyright svg {
+  fill: var(--copyright-black);
+}
+
+.copyright svg:hover,
+.copyright svg:focus {
+  fill: var(--basic-light-blue);
+}
+
+.copyright svg:active {
+  fill: var(--basic-gray-dark);
 }
 
 /*hotel*/
@@ -590,11 +628,105 @@ legend {
   background-color: transparent;
 }
 
+/*меню сортировки по цене, рейтингу и тд*/
 .results {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+
+  position: relative;
+  margin-right: 73px;
+  margin-left: 73px;
+  margin-bottom: 31px;
+  margin-top: 29px;
 }
+
+.results::after {
+  content: " ";
+  width: 1200px;
+  height: 1px;
+  background-color: #E5E5E5;
+  position: absolute;
+  right: -73px;
+  bottom: -32px;;
+}
+
+.results span{
+  font-weight: bold;
+ font-size: 21px;
+ line-height: 26px;
+}
+
+.results-sorting a {
+  color: var(--basic-gray-dark);
+  border-bottom: 1px dotted var(--basic-light-blue);
+  margin-right: 32px;
+}
+
+.results-sorting a:hover,
+.results-sorting a:focus {
+  color: var(--basic-light-blue);
+  border-bottom: 1px dotted var(--basic-light-blue);
+}
+
+.results-sorting a:active {
+  color: var(--basic-black);
+  border: none;
+}
+
+.results-sorting a:not([href]) {
+  color: var(--basic-light-blue);
+  border: none;
+}
+
+.results-sorting {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  justify-content: flex-start;
+  padding-left: 9px;
+  box-sizing: border-box;
+  padding-bottom: 3px;
+}
+
+.results-sorting p {
+  margin: 0px;
+  padding-right: 40px;
+}
+
+
+.arrows {
+  position: absolute;
+  right: -9px;
+  top: 8px;
+}
+
+.arrows a{
+  margin-right: 9px;
+}
+.arrows svg {
+  fill: var(--arrow-fill);
+}
+.arrows svg:hover,
+.arrows svg:focus {
+  fill: var(--basic-black);
+}
+
+.arrows svg:active {
+  fill: var(--basic-light-blue);
+}
+
+.arrows a:not([href]) svg {
+  fill: var(--basic-light-blue);
+}
+
+
 /*****Список отелей**/
 
 .hotels-list {
@@ -604,7 +736,6 @@ legend {
   list-style: none;
   width: 1054px;
   margin: 0 auto;
-  outline: 5px solid red;
   padding: 0px;
   justify-content: center;
   flex-direction: column;
@@ -613,13 +744,24 @@ legend {
 .hotels-list li{
  display: flex;
  flex-wrap: wrap;
- outline: 3px solid green;
- min-height: 151px;
  flex-direction: row;
+ padding-bottom: 25px;
+ position: relative;
+}
+
+.hotels-list .hotels-list-item::after {
+  content: " ";
+  width: 1200px;
+  height: 1px;
+  background-color: #E5E5E5;
+  position: absolute;
+  right: -73px;
+  bottom: -1px;;
 }
 
 .img-hotel{
   align-self: center;
+  padding-top: 30px;
 }
 .hotels-list-item h2{
   font-weight: bold;
@@ -627,17 +769,24 @@ legend {
   line-height: 26px;
   color: var(--basic-black);
   margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 7px;
 }
+
 .wrapper-link {
   display: flex;
   flex-direction: column;
-  outline: 3px solid black;
   justify-content: center;
   flex-grow: 1;
-  padding-left: 19px;
+  padding-left: 29px;
 }
 .wrapper-hotel {
   display: flex;
+}
+
+.wrapper-hotel p {
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 
 .more,
@@ -645,6 +794,11 @@ legend {
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 17px;
+  padding-right: 17px;
+  margin-right: 6px;
 }
 
 .hotel,
@@ -652,7 +806,6 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 10px;
 }
 
 .more {
@@ -662,7 +815,8 @@ legend {
   background-color: var(--basic-brown);
 }
 
-.more:hover {
+.more:hover,
+.more:focus {
   background-color: var(--basic-dark-blue);
 }
 .more:active {
@@ -670,7 +824,8 @@ legend {
   color: var(--transparent-white)
 }
 
-.booking:hover {
+.booking:hover,
+.booking:focus {
   background-color: var(--basic-brown-dark);
 }
 .booking:active {
@@ -681,17 +836,38 @@ legend {
 .hotels-list-item a{
   color: var(--basic-white);
   display: flex;
-  justify-content: flex-start
+  align-self: flex-start;
 }
 .rating {
   display: flex;
   justify-content: flex-end;
-  outline: 1px solid brown;
   align-items: flex-end;
-  min-width: 130px;
+  flex-direction: column;
+  position: relative;
 }
+
+.star {
+  display: flex;
+  margin: 0px;
+  position: absolute;
+  padding: 0px;
+  top: 30px;
+  right: -2px;
+}
+
+.star-item:not(:last-child) {
+  padding-right: 5px;
+}
+
 .rating p {
   background-color: var(--basic-gray);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  padding-right: 12px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  color: var(--rating-gray);
 }
 
 /*Скрытое */
