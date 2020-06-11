@@ -17,16 +17,13 @@
   --rating-gray: #666666;
   --border-gray: #E5E5E5;
   --input-gray-dark: #EBEBEB;
+  --togle-background: #ABABAB;
 }
 
 .page {
   height: 100%;
 }
 
-.page-header {
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
-}
 
 body {
   font-family: 'PT Sans', 'Arial', sans-serif;
@@ -111,7 +108,7 @@ img {
 }
 .sedona-photo::before {
   content: " ";
-  background-image: url("../img/welcome.svg"), url(../img/intro-mask.svg);
+  background-image: url("../img/welcome.svg"), url("../img/intro-mask.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: 50% 49%,50% 100%;
   width: 1200px;
@@ -362,6 +359,7 @@ img {
   box-sizing: border-box;
   padding-left: 12px;
   text-transform: uppercase;
+  padding-right: 37px;
 }
 
 .booking-item input:hover{
@@ -419,6 +417,8 @@ img {
   width: 114px;
   margin-right: 2px;
   text-align: center;
+  padding-right: 28px;
+  padding-left: 32px;
 }
 
 
@@ -620,9 +620,7 @@ img {
 /*hotel*/
 .filter form{
   display: flex;
-  padding: 48px;
-  justify-content: space-around;
-  outline: solid 1px greenyellow;
+  position: relative;
 }
 
 
@@ -640,20 +638,116 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  outline: 2px solid red;
 }
+
+.infrastructure {
+  padding-left: 112px;
+}
+
+.hotels-type {
+  padding-left: 106px;
+  margin-right: 120px;
+}
+
 .filter fieldset{
   border: none;
   display: flex;
   margin: 0px;
-  outline: 2px solid green;
 }
 
-.price-toggle {
+.filter .price-day {
+  width: 317px;
+  margin-left: 326px;
+  margin-top: 25px;
+}
+
+.range-controls {
+  height: 21px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.range-filter {
+  width: 317px;
+  margin-top: 7px;
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: var(--transparent-white);
+}
+
+.range-controls .bar {
+  height: 2px;
+  background-color: var(--basic-white);
+  width: 79%;
+}
+
+.range-controls .toggle {
+  width: 19px;
+  height: 21px;
+  background-image: url("../img/filter-button.svg");
+  position: absolute;
+  bottom: 9px;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+ left: 0px;
+}
+
+.range-controls .toggle-max {
+  left: 248px;
+}
+.price-controls {
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
   display: flex;
   justify-content: space-around;
-  border: 2px solid var(--basic-white);
-  border-radius: 2px;
+}
+.price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 50px;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
+
+.price-controls .min-price {
+  padding-left: 39px;
+}
+
+.price-controls .min-price {
+  padding-left: 24px;
+}
+
+.price-controls::before {
+  content: " ";
+  width: 2px;
+  height: 22px;
+  position: absolute;
+  background-color: var(--basic-white);
+  top: 7px;
+}
+
+.price-day legend {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+.price-day label {
+  font-family: "PT Sans", "Arial", sans-serif;;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
 }
 
 legend {
@@ -661,6 +755,20 @@ legend {
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
+  padding-top: 27px;
+  padding-bottom: 18px;
+}
+
+.infrastructure legend {
+  position: relative;
+  top: -2px;
+  right: -9px;
+}
+
+.hotels-type legend {
+  position: relative;
+  top: -2px;
+  right: -3px;
 }
 
 .show {
@@ -668,12 +776,56 @@ legend {
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  padding: 8px 35px;
+  padding-top: 6px;
+  padding-bottom: 7px;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   color: var(--basic-white);
   background-color: transparent;
+  box-sizing: border-box;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 14px;
+  margin-left: 84px;
 }
+
+/*Чекбоксы */
+
+.check-box-list label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 25px;
+}
+
+.check-input + label::before,
+.check-input:hover + label::before {
+  content: " ";
+  background-image: url("../img/checkbox-off.svg");
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -40px;
+}
+
+.check-input:disabled + label::before {
+  background-image: url("../img/checkbox-off-disable.svg")
+}
+
+.check-input:checked + label::before {
+  content: " ";
+  background-image: url("../img/checkbox-on.svg");
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  left: -40px;
+}
+
+.check-input:checked:disabled + label::before {
+  background-image: url("../img/checkbox-on-disable.svg");
+}
+
+
 
 /*меню сортировки по цене, рейтингу и тд*/
 .results {
@@ -919,7 +1071,14 @@ legend {
 
 /*Скрытое */
 .visually-hidden {
-  display: none;
-  margin: 0px;
-  padding: 0px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

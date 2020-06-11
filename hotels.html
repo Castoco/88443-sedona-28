@@ -26,47 +26,59 @@
         <section class="filter">
           <h1 class="visually-hidden">Выбор отеля</h1>
           <form action="https://echo.htmlacademy.ru/courses" method="get" oninput="sumoutput.value=price.value">
-            <fieldset>
-            <legend>Инфраструктура:</legend>
-            <ul class="infrastructure">
+            <fieldset class="infrastructure">
+              <legend>Инфраструктура:</legend>
+              <ul class="check-box-list">
               <li>
-                <input type="checkbox" name="poll" id="swim-poll">
+                <input type="checkbox" class="check-input visually-hidden" name="poll" id="swim-poll" checked tabindex="0">
                 <label for="swim-poll">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" name="parking" id="parking-box">
+                <input type="checkbox" class="check-input visually-hidden" name="parking" id="parking-box" tabindex="0" >
                 <label for="parking-box">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" name="wi-fi" id="wifi" checked>
+                <input type="checkbox" class="check-input visually-hidden" name="wi-fi" id="wifi" tabindex="0">
                 <label for="wifi">WI-FI</label>
               </li>
-            </ul>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="hotels-type">
             <legend>Тип жилья:</legend>
-            <ul>
+              <ul class="check-box-list">
               <li>
-                <input type="checkbox" name="hotel" id="hotel-box" checked>
-                <label for="hotel-box">Отель</label>
+                <input type="checkbox"  class="check-input visually-hidden" name="hotel" id="hotel-box" checked>
+                <label for="hotel-box">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" name="motel" id="motel-box" checked>
+                <input type="checkbox" class="check-input visually-hidden" name="motel" id="motel-box" checked>
                 <label for="motel-box">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" name="apartaments" id="apartaments-box" checked>
+                <input type="checkbox" class="check-input visually-hidden" name="apartaments" id="apartaments-box" checked>
                 <label for="apartaments-box">Апартаменты</label>
               </li>
-            </ul>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="price-day">
               <legend>Стоимость в сутки (Р):</legend>
-              <div class="price-toggle">
-                <div>от 0</div>
-                <output name="sum" id="sumoutput">ДО 3000</output>
+              <div class="range-filter">
+                <div class="price-controls">
+                  <label class="min-price">
+                    от <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    до <input type="number" name="min-price" value="3000">
+                  </label>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
               </div>
-              <input type="range" name="price" min="0" max="4000" step="100" id="price" value="3000">
               <button type="submit" class="show">Показать</button>
             </fieldset>
           </form>
