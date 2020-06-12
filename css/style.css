@@ -17,7 +17,6 @@
   --rating-gray: #666666;
   --border-gray: #E5E5E5;
   --input-gray-dark: #EBEBEB;
-  --togle-background: #ABABAB;
 }
 
 .page {
@@ -693,6 +692,13 @@ img {
   cursor: pointer;
 }
 
+.range-controls .toggle:hover,
+.range-controls .toggle:focus {
+  width: 23px;
+  height: 22px;
+  background-image: url("../img/filter-button-hover.svg");
+}
+
 .range-controls .toggle-min {
  left: 0px;
 }
@@ -789,23 +795,33 @@ legend {
   margin-left: 84px;
 }
 
+.show:hover,
+.show:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
 /*Чекбоксы */
 
 .check-box-list label {
   display: block;
   position: relative;
   cursor: pointer;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
-.check-input + label::before,
-.check-input:hover + label::before {
+.check-input + label::before {
   content: " ";
   background-image: url("../img/checkbox-off.svg");
   position: absolute;
   width: 23px;
   height: 23px;
   left: -40px;
+}
+
+
+.check-input:focus + label::before {
+  outline: 1px solid white;
 }
 
 .check-input:disabled + label::before {
@@ -819,6 +835,11 @@ legend {
   width: 27px;
   height: 23px;
   left: -40px;
+}
+
+
+.check-input:checked:focus + label::before {
+  outline: 1px solid white;
 }
 
 .check-input:checked:disabled + label::before {
