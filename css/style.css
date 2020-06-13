@@ -334,7 +334,13 @@ img {
   margin-left: -284px;
   background-color: inherit;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  animation:bounce 0.6s;
 }
+
+.bounce {
+  animation:bounce 0.6s;
+}
+
 .booking-field {
   width: 568px;
   display: flex;
@@ -1102,4 +1108,26 @@ legend {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.black-hole {
+  display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
