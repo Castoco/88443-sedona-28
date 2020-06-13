@@ -76,24 +76,38 @@ img {
   margin: 0 auto;
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
-/* Отступы элементов в меню навигации*/
-.information-item {
-  padding-left: 72px;
-  padding-right: 134px;
+
+.nav-item {
+  width: 20%;
 }
 
-.media-item {
-  padding-right: 209px;
+.nav-item:nth-of-type(3n) {
+  margin-left: 20%;
+
 }
+.information-item {
+  text-align: left;
+ }
+
+ .media-item {
+  text-align: left;
+  padding-left: 18px;
+  box-sizing: border-box;
+ }
 
 .map-item {
-  padding-left: 209px;
-  padding-right: 147px;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 15px;
 }
+
+ .hotels-item {
+  text-align: right;
+ }
 
 .nav-list {
   display: flex;
-  margin: 0px auto;
+  margin: 0px 72px;
   padding: 15px 0;
   width: 100%;
   list-style: none;
