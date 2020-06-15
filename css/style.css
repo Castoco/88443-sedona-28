@@ -271,9 +271,7 @@ img {
   padding-top: 55px;
   padding-bottom: 28px;
 }
-/* Мне кажется тут гораздо проще задать было тег </br>
-чем для всех элементов списка преимуществ городить отступы по краям ведь у всех они разные,
-получается дольше и кода больше, почему нельзя? */
+
 .area,
 .road {
   padding: 0px 15px;
@@ -307,8 +305,10 @@ img {
 }
 
 .order {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   padding-top: 2px;
+  background-color: inherit;
+  z-index: 1;
 }
 
 .order h2 {
@@ -330,6 +330,7 @@ img {
   padding: 30px 139px;
   align-self: center;
   min-width: 319px;
+  z-index: 1;
 }
 .form-order>button:hover,
 .form-order>button:focus {
@@ -348,11 +349,7 @@ img {
   margin-left: -284px;
   background-color: inherit;
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
-  animation:bounce 0.6s;
-}
-
-.bounce {
-  animation:bounce 0.6s;
+  animation: slideInDown 0.6s;
 }
 
 .booking-field {
@@ -623,16 +620,16 @@ img {
   margin-left: 65px;
 }
 
-.copyright svg {
+.copyright a svg {
   fill: var(--copyright-black);
 }
 
-.copyright svg:hover,
-.copyright svg:focus {
+.copyright a:hover svg,
+.copyright a:focus svg{
   fill: var(--basic-light-blue);
 }
 
-.copyright svg:active {
+.copyright a:active svg {
   fill: var(--basic-gray-dark);
 }
 
@@ -1127,23 +1124,9 @@ legend {
 .black-hole {
   display: none;
 }
-
-@keyframes bounce {
-
-  70% {
-    transform: translateY(-30px);
-  }
-
-
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .shake {
-animation: shake 0.6s;
-}
+  animation: shake 0.6s;
+  }
 
 @keyframes shake {
   0%,
@@ -1166,3 +1149,15 @@ animation: shake 0.6s;
     transform: translateX(10px);
   }
 }
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -50%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
