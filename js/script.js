@@ -1,6 +1,6 @@
-let showbuton = document.querySelector(".booking-button");
-let box = document.querySelector(".form-booking");
-let arrival = document.querySelector("[name=arrival");
+var showbuton = document.querySelector(".booking-button");
+var box = document.querySelector(".form-booking");
+var arrival = document.querySelector("[name=arrival");
 var form = document.querySelector('.booking-field');
 var dayout = document.querySelector("[name=checkout]");
 
