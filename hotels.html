@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style-min.css">
   </head>
   <body>
@@ -27,7 +28,7 @@
           <h1 class="visually-hidden">Выбор отеля</h1>
           <form action="https://echo.htmlacademy.ru/courses" method="get">
             <fieldset class="infrastructure">
-              <legend>Инфраструктура:</legend>
+              <legend class="form-title">Инфраструктура:</legend>
               <ul class="check-box-list">
               <li>
                 <input type="checkbox" class="check-input visually-hidden" name="poll" id="swim-poll" checked>
@@ -44,7 +45,7 @@
               </ul>
             </fieldset>
             <fieldset class="hotels-type">
-            <legend>Тип жилья:</legend>
+            <legend class="form-title">Тип жилья:</legend>
               <ul class="check-box-list">
               <li>
                 <input type="checkbox"  class="check-input visually-hidden" name="hotel" id="hotel-box" checked>
@@ -61,7 +62,7 @@
               </ul>
             </fieldset>
             <fieldset class="price-day">
-              <legend>Стоимость в сутки (Р):</legend>
+              <legend class="form-title">Стоимость в сутки (Р):</legend>
               <div class="range-filter">
                 <div class="price-controls">
                   <label class="min-price">
