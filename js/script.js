@@ -4,6 +4,8 @@ var arrival = document.querySelector("[name=arrival");
 var form = document.querySelector('.booking-field');
 var dayout = document.querySelector("[name=checkout]");
 
+box.classList.add('black-hole');
+
 showbuton.addEventListener('click', function () {
   box.classList.toggle('black-hole');
   arrival.focus();
