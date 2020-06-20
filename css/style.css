@@ -35,13 +35,10 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  min-width: 1220px;
+  min-width: 1200px;
   line-height: 21px;
   font-weight: 400;
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  height: 100%;
 }
 
 /* User navigation */
@@ -76,7 +73,11 @@ img {
   background-color: var(--basic-white);
   width: 1200px;
   margin: 0 auto;
+  min-height: 100%;
   box-shadow: 0px 5px 15px var(--box-shadow);
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 /* Стили главного меню */
@@ -359,6 +360,7 @@ img {
   align-self: center;
   min-width: 319px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .form-order>button:hover,
@@ -578,6 +580,7 @@ img {
   flex-direction:row;
   padding-top: 2px;
   width: 1200px;
+  align-items: baseline;
 }
 
 .home-page {
@@ -592,9 +595,10 @@ img {
   font-size: 21px;
   line-height: 26px;
   padding-bottom: 36px;
-  width:400px;
+  width: 400px;
   box-sizing: border-box;
   padding-left: 74px;
+  align-self: center;
 }
 
 .contacts a {
@@ -609,7 +613,10 @@ img {
   flex-basis: 400px;
   padding-left: 7px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
+
 .socials ul {
   padding: 0;
   display: flex;
@@ -617,10 +624,12 @@ img {
   justify-content: center;
   margin: 0px;
   padding-top: 34px;
+  flex-wrap: wrap;
 }
 
 .social-items {
   margin-right: 6px;
+  margin-bottom: 6px;
 }
 
 .social-items a {
@@ -700,7 +709,7 @@ img {
 }
 
 .hotels-type {
-  padding-left: 106px;
+  padding-left: 109px;
   margin-right: 120px;
 }
 
@@ -799,10 +808,10 @@ img {
   top: 7px;
 }
 
-.price-day legend {
+.price-day .form-title {
   margin: 0px;
   padding: 0px;
-  text-align: left;
+  padding-bottom: 1px;
 }
 
 .price-day label {
@@ -814,25 +823,26 @@ img {
   color: var(--basic-white);
 }
 
-legend {
+.form-title {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
   padding-top: 27px;
   padding-bottom: 18px;
+  text-align: left;
 }
 
-.infrastructure legend {
+.infrastructure .form-title {
   position: relative;
   top: -2px;
-  right: -9px;
+  right: 40px;
 }
 
-.hotels-type legend {
+.hotels-type .form-title {
   position: relative;
   top: -2px;
-  right: -3px;
+  right: 42px;
 }
 
 .show {
@@ -917,7 +927,7 @@ legend {
   margin-right: 73px;
   margin-left: 73px;
   margin-bottom: 31px;
-  margin-top: 29px;
+  margin-top: 28px;
 }
 
 .results::after {
