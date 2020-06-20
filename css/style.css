@@ -38,7 +38,7 @@ body {
   min-width: 1200px;
   line-height: 21px;
   font-weight: 400;
-  min-height: 100%;
+  height: 100%;
 }
 
 /* User navigation */
@@ -73,6 +73,7 @@ img {
   background-color: var(--basic-white);
   width: 1200px;
   margin: 0 auto;
+  min-height: 100%;
   box-shadow: 0px 5px 15px var(--box-shadow);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -359,6 +360,7 @@ img {
   align-self: center;
   min-width: 319px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .form-order>button:hover,
@@ -578,6 +580,7 @@ img {
   flex-direction:row;
   padding-top: 2px;
   width: 1200px;
+  align-items: baseline;
 }
 
 .home-page {
@@ -595,7 +598,7 @@ img {
   width: 400px;
   box-sizing: border-box;
   padding-left: 74px;
-
+  align-self: center;
 }
 
 .contacts a {
